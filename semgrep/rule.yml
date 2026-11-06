@@ -1,0 +1,10 @@
+rules:
+  - id: os-system-injection
+    languages: [python]
+    severity: ERROR
+    message: User input flows into os.system (command injection, CWE-78)
+    mode: taint
+    pattern-sources:
+      - pattern: input(...)
+    pattern-sinks:
+      - pattern: os.system(...)

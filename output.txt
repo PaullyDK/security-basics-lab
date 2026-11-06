@@ -1,0 +1,25 @@
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+udp   UNCONN 0      0          127.0.0.1:323       0.0.0.0:*          
+udp   UNCONN 0      0            0.0.0.0:5353      0.0.0.0:*          
+udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*          
+udp   UNCONN 0      0      127.0.0.53%lo:53        0.0.0.0:*          
+udp   UNCONN 0      0              [::1]:323          [::]:*          
+udp   UNCONN 0      0               [::]:5353         [::]:*          
+tcp   LISTEN 0      4096       127.0.0.1:631       0.0.0.0:*          
+tcp   LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*          
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          
+tcp   LISTEN 0      4096           [::1]:631          [::]:*          
+paul-keiser
+Linux paul-keiser-VMware-Virtual-Platform 7.0.0-38-generic #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:10:14 UTC 2026 x86_64 GNU/Linux
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:d9:16:6d brd ff:ff:ff:ff:ff:ff
+    inet 192.168.104.128/24 brd 192.168.104.255 scope global dynamic noprefixroute ens33
+       valid_lft 1697sec preferred_lft 1697sec
+    inet6 fe80::20c:29ff:fed9:166d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
