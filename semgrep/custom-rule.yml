@@ -1,0 +1,16 @@
+rules:
+  - id: python-command-injection
+    languages: [python]
+    message: "User input flows to os.system() — command injection"
+    severity: ERROR
+    pattern: |
+      os.system("ls " + $INPUT)
+  - id: python-taint-injection
+    languages: [python]
+    message: "User input reaches os.system()"
+    severity: ERROR
+    mode: taint
+    pattern-sources:
+      - pattern: input(...)
+    pattern-sinks:
+      - pattern: os.system(...)
